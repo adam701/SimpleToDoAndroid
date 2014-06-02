@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${packageName}.${activityClass}" >
+
+    <EditText
+        android:id="@+id/etNewItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="19dp"
+        android:layout_marginLeft="14dp"
+        android:ems="10"
+        android:hint="@string/add_item_hint" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/etNewItem"
+        android:layout_toRightOf="@+id/etNewItem"
+        android:onClick="addNewItem"
+        android:text="@string/add_button" />
+ 
+
+    <ListView
+        android:id="@+id/lvToDo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnAdd"
+        android:layout_alignLeft="@+id/etNewItem"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/btnAdd"
+        android:layout_marginTop="14dp" >
+
+    </ListView>
+
+</RelativeLayout>
